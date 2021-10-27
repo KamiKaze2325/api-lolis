@@ -39,7 +39,7 @@ async function getRandom(nans) {
    })
    router.all('/nsfwloli', async (req, res) => {
    try {
-   json = JSON.parse(fs.readFileSync(__path + lolis.json').toString())
+   json = JSON.parse(fs.readFileSync(__path + '/lib/nsfwlolis.json').toString())
    random = json[Math.floor(Math.random() * json.length)]
    res.send({ status: 200, url: random })
    } catch (e) {
