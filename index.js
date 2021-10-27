@@ -1,8 +1,8 @@
 var express = require('express'),
     cors = require('cors'),
     secure = require('ssl-express-www' ),
-  var PORT = process.env.PORT || 80,
-path = require('path');
+    PORT = process.env.PORT || 80,
+    path = require('path');
 
 var mainrouter = require('./main')
 
