@@ -21,7 +21,7 @@ async function getRandom(nans) {
 
  router.all('/loli', async (req, res) => {
    try {
-   json = JSON.parse(fs.readFileSync('lib/lolis.json').toString())
+   json = JSON.parse(fs.readFileSync(__path + '/lib/lolis.json').toString())
    random = json[Math.floor(Math.random() * json.length)]
    res.send({ status: 200, url: random })
    } catch (e) {
@@ -30,7 +30,7 @@ async function getRandom(nans) {
    })
  router.all('/shota', async (req, res) => {
    try {
-   json = JSON.parse(fs.readFileSync('lib/shotas.json').toString())
+   json = JSON.parse(fs.readFileSync(__path + '/lib/shotas.json').toString())
    random = json[Math.floor(Math.random() * json.length)]
    res.send({ status: 200, url: random })
    } catch (e) {
@@ -39,7 +39,7 @@ async function getRandom(nans) {
    })
    router.all('/nsfwloli', async (req, res) => {
    try {
-   json = JSON.parse(fs.readFileSync('lib/nsfwlolis.json').toString())
+   json = JSON.parse(fs.readFileSync(__path + lolis.json').toString())
    random = json[Math.floor(Math.random() * json.length)]
    res.send({ status: 200, url: random })
    } catch (e) {
