@@ -25,7 +25,7 @@ async function getRandom(nans) {
    random = json[Math.floor(Math.random() * json.length)]
    res.send({ status: 200, url: random })
    } catch (e) {
-   res.send({ status: 400, response: 'Server Error!' })
+   res.send({ status: 400, response: 'Server Error!', err: e.toString() })
    }
    })
  router.all('/shota', async (req, res) => {
@@ -34,7 +34,7 @@ async function getRandom(nans) {
    random = json[Math.floor(Math.random() * json.length)]
    res.send({ status: 200, url: random })
    } catch (e) {
-   res.send({ status: 400, response: 'Server Error!' })
+   res.send({ status: 400, response: 'Server Error!', err: e.toString() })
    }
    })
    router.all('/nsfwloli', async (req, res) => {
@@ -43,7 +43,7 @@ async function getRandom(nans) {
    random = json[Math.floor(Math.random() * json.length)]
    res.send({ status: 200, url: random })
    } catch (e) {
-   res.send({ status: 400, response: 'Server Error!' })
+   res.send({ status: 400, response: 'Server Error!', err: e.toString() })
    }
    })
    router.all('*', async (req, res) => {
