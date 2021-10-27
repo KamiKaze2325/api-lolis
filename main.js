@@ -18,9 +18,6 @@ async function getRandom(nans) {
   he = nans[Math.floor(Math.random() * nans.length)]
    return he
 }
-router.all('/', async (req, res) => {
-   res.sendFile(__path + '/api.html')
-   })
 
  router.all('/loli', async (req, res) => {
    try {
